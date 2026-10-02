@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lumen — Run your business on one clear page</title>
+<meta name="description" content="Lumen brings your sales, customers and cash flow into one calm workspace. See what matters, act before it costs you." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234f46e5'/%3E%3Cpath d='M9 22V10l7 7 7-7v12' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#hero">Skip to content</a>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a class="brand" href="#hero" aria-label="Lumen home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="32" height="32"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M9 22V10l7 7 7-7v12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand__name">Lumen</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <div class="nav__cta-mobile">
+        <a class="btn btn--ghost" href="#">Sign in</a>
+        <a class="btn btn--primary" href="#pricing">Start free</a>
+      </div>
+    </nav>
+
+    <div class="nav__cta">
+      <a class="btn btn--ghost" href="#">Sign in</a>
+      <a class="btn btn--primary" href="#pricing">Start free</a>
+    </div>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="container hero__inner">
+    <div class="hero__copy reveal">
+      <p class="eyebrow"><span class="eyebrow__dot"></span> New — Lumen Forecasts</p>
+      <h1>Run your business on <span class="grad">one clear page</span>.</h1>
+      <p class="hero__sub">
+        Lumen pulls your sales, customers and cash flow into a single calm
+        workspace. Spot the leak before it costs you a quarter.
+      </p>
+
+      <form class="hero__form" id="trialForm" novalidate>
+        <input type="email" id="trialEmail" name="email" placeholder="Work email" autocomplete="email" aria-label="Work email" required />
+        <button class="btn btn--primary btn--lg" type="submit">Start free trial</button>
+        <p class="form__msg" id="trialMsg" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="hero__note">14 days free &middot; No card required &middot; Cancel anytime</p>
+
+      <ul class="hero__proof">
+        <li><strong>4,200+</strong><span>teams onboarded</span></li>
+        <li><strong>31%</strong><span>faster month-end close</span></li>
+        <li><strong>4.9/5</strong><span>average review</span></li>
+      </ul>
+    </div>
+
+    <div class="hero__visual reveal" data-delay="120">
+      <div class="mock" role="img" aria-label="Illustration of the Lumen dashboard">
+        <div class="mock__bar">
+          <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+          <span class="mock__url">app.lumen.io/dashboard</span>
+        </div>
+        <div class="mock__body">
+          <aside class="mock__side">
+            <span class="sbar sbar--on"></span>
+            <span class="sbar"></span>
+            <span class="sbar"></span>
+            <span class="sbar"></span>
+            <span class="sbar"></span>
+          </aside>
+          <div class="mock__main">
+            <div class="kpis">
+              <div class="kpi"><span>Revenue</span><strong>$482,190</strong><em class="up">+18.4%</em></div>
+              <div class="kpi"><span>New customers</span><strong>1,284</strong><em class="up">+9.1%</em></div>
+              <div class="kpi"><span>Churn</span><strong>1.9%</strong><em class="up">-0.6%</em></div>
+            </div>
+            <div class="chart">
+              <div class="chart__head">
+                <span>Weekly revenue</span>
+                <div class="chart__legend"><i></i> This year &nbsp; <i class="g"></i> Last year</div>
+              </div>
+              <svg viewBox="0 0 560 190" preserveAspectRatio="none" class="chart__svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="fillA" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.26"/>
+                    <stop offset="100%" stop-color="#4f46e5" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <g class="grid"><line x1="0" y1="40" x2="560" y2="40"/><line x1="0" y1="95" x2="560" y2="95"/><line x1="0" y1="150" x2="560" y2="150"/></g>
+                <path class="chart__ghost" d="M0,150 C60,140 90,132 140,126 C200,118 240,112 290,104 C350,95 400,92 450,84 C500,76 530,72 560,66 L560,190 L0,190 Z"/>
+                <path class="chart__line" d="M0,162 C50,150 80,140 130,134 C190,126 230,112 280,104 C340,95 380,78 430,70 C480,62 520,40 560,30 L560,190 L0,190 Z"/>
+                <path class="chart__stroke" d="M0,162 C50,150 80,140 130,134 C190,126 230,112 280,104 C340,95 380,78 430,70 C480,62 520,40 560,30"/>
+              </svg>
+            </div>
+            <div class="rows">
+              <div class="row"><span class="row__av" style="--c:#4f46e5">AK</span><span class="row__name">Atlas Logistics</span><span class="row__tag">Renewed</span><b>$18,400</b></div>
+              <div class="row"><span class="row__av" style="--c:#0ea5e9">NR</span><span class="row__name">North River Co.</span><span class="row__tag">New</span><b>$12,050</b></div>
+              <div class="row"><span class="row__av" style="--c:#10b981">HB</span><span class="row__name">Harbor &amp; Birch</span><span class="row__tag">New</span><b>$9,720</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mock__float">
+        <span class="mock__float-ic">✓</span>
+        <div><strong>Forecast updated</strong><small>Q4 projected +22%</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOGOS ================= -->
+<section class="logos" aria-label="Companies using Lumen">
+  <div class="container">
+    <p class="logos__label reveal">Trusted by teams at</p>
+    <div class="logos__row reveal" data-delay="80">
+      <span>NORTHWIND</span><span>Vertex&nbsp;Labs</span><span>ARCLIGHT</span><span>Foundry&amp;Co</span><span>KESTREL</span><span>Lumen&nbsp;Bank</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="section" id="features">
+  <div class="container">
+    <header class="sec-head reveal">
+      <p class="tag">Features</p>
+      <h2>Everything you need, nothing you don't</h2>
+      <p class="sec-head__sub">One workspace replaces the eleven tabs you currently open every morning.</p>
+    </header>
+
+    <div class="grid grid--3">
+      <article class="card reveal">
+        <span class="card__ic" style="--c:#4f46e5">◔</span>
+        <h3>One live number</h3>
+        <p>Revenue, margin and cash, reconciled automatically across Stripe, Shopify and your bank.</p>
+      </article>
+      <article class="card reveal" data-delay="80">
+        <span class="card__ic" style="--c:#0ea5e9">◈</span>
+        <h3>Leak detection</h3>
+        <p>Lumen flags churn risk and failing ad spend the day it starts — not at month end.</p>
+      </article>
+      <article class="card reveal" data-delay="160">
+        <span class="card__ic" style="--c:#10b981">◐</span>
+        <h3>Forecasts you trust</h3>
+        <p>Scenario planning with real ranges. See the outcome of a price change before you ship it.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__ic" style="--c:#f59e0b">◑</span>
+        <h3>Team, aligned</h3>
+        <p>Shared definitions, role-based views, and a comment trail on every number that moves.</p>
+      </article>
+      <article class="card reveal" data-delay="80">
+        <span class="card__ic" style="--c:#8b5cf6">◒</span>
+        <h3>Reports in one click</h3>
+        <p>Board decks, investor updates and tax exports — generated, not assembled.</p>
+      </article>
+      <article class="card reveal" data-delay="160">
+        <span class="card__ic" style="--c:#ef4444">◓</span>
+        <h3>Bank-grade security</h3>
+        <p>SOC 2 Type II, SSO/SAML, and read-only connections by default. Your data stays yours.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SPLIT ================= -->
+<section class="section section--alt" id="how">
+  <div class="container split">
+    <div class="split__copy reveal">
+      <p class="tag">How it works</p>
+      <h2>Live in an afternoon, not a quarter</h2>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__n">1</span>
+          <div><h3>Connect your tools</h3><p>Stripe, Shopify, Xero, AdSpend — one-click OAuth, read-only, revocable any time.</p></div>
+        </li>
+        <li class="step reveal" data-delay="80">
+          <span class="step__n">2</span>
+          <div><h3>Lumen maps the model</h3><p>It learns your categories, margins and customer types automatically.</p></div>
+        </li>
+        <li class="step reveal" data-delay="160">
+          <span class="step__n">3</span>
+          <div><h3>Decide with clarity</h3><p>Weekly digest in plain English: what changed, why, what to do next.</p></div>
+        </li>
+      </ol>
+      <a class="btn btn--primary btn--lg" href="#pricing">Start free trial</a>
+    </div>
+
+    <div class="split__visual reveal" data-delay="120">
+      <div class="panel">
+        <div class="panel__head"><span>Weekly digest — Wk 41</span><span class="pill">Ready</span></div>
+        <div class="panel__row panel__row--good"><b>Revenue up 18%</b><span>Driven by 42 new accounts in North America.</span></div>
+        <div class="panel__row panel__row--warn"><b>Ad spend up 34%, ROAS down 0.4</b><span>Google Ads · "summer sale" campaign. Suggested: cap at $3.2k/wk.</span></div>
+        <div class="panel__row panel__row--good"><b>Churn down to 1.9%</b><span>Retention play sent to 260 at-risk accounts.</span></div>
+        <div class="panel__row"><b>Q4 forecast: $2.41M</b><span>Range $2.28M – $2.55M at 80% confidence.</span></div>
+        <div class="panel__foot"><span class="spinner" aria-hidden="true"></span> Refreshed 4 min ago</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="section">
+  <div class="container">
+    <div class="stats reveal">
+      <div class="stat"><strong data-count="4200" data-suffix="+">0</strong><span>Teams onboarded</span></div>
+      <div class="stat"><strong data-count="31" data-suffix="%">0</strong><span>Faster month-end close</span></div>
+      <div class="stat"><strong data-count="4.9" data-decimals="1" data-suffix="/5">0</strong><span>Average review</span></div>
+      <div class="stat"><strong data-count="12" data-suffix="M+">0</strong><span>Events processed</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section section--alt">
+  <div class="container">
+    <header class="sec-head reveal">
+      <p class="tag">Loved by operators</p>
+      <h2>People who stopped guessing</h2>
+    </header>
+    <div class="grid grid--3">
+      <figure class="quote reveal">
+        <blockquote>“We closed the month in two days instead of nine. The first week it paid for itself.”</blockquote>
+        <figcaption><span class="quote__av" style="--c:#4f46e5">SM</span><div><strong>Sana Mahmud</strong><small>COO, Northwind Trading</small></div></figcaption>
+      </figure>
+      <figure class="quote reveal" data-delay="80">
+        <blockquote>“I found a £6k monthly leak in our ad accounts before lunch. That was the whole year of tooling.”</blockquote>
+        <figcaption><span class="quote__av" style="--c:#0ea5e9">DR</span><div><strong>Daniel Ross</strong><small>Founder, Atlas Logistics</small></div></figcaption>
+      </figure>
+      <figure class="quote reveal" data-delay="160">
+        <blockquote>“The weekly digest is the only email I actually read. It's just… true.”</blockquote>
+        <figcaption><span class="quote__av" style="--c:#10b981">AK</span><div><strong>Aiko Tanaka</strong><small>Head of Finance, Vertex Labs</small></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="section" id="pricing">
+  <div class="container">
+    <header class="sec-head reveal">
+      <p class="tag">Pricing</p>
+      <h2>Simple plans, honest limits</h2>
+      <p class="sec-head__sub">Every plan includes unlimited viewers, daily sync and the full digest.</p>
+    </header>
+
+    <div class="toggle reveal" role="group" aria-label="Billing period">
+      <button class="toggle__btn is-active" data-period="monthly">Monthly</button>
+      <button class="toggle__btn" data-period="yearly">Yearly <span class="save">-20%</span></button>
+    </div>
+
+    <div class="grid grid--3 plans">
+      <article class="plan reveal">
+        <h3>Starter</h3>
+        <p class="plan__desc">For solo founders getting their numbers together.</p>
+        <p class="plan__price"><span class="cur">$</span><span class="amt" data-monthly="0" data-yearly="0">0</span><span class="per">/mo</span></p>
+        <p class="plan__note" data-monthly="Free forever" data-yearly="Free forever">Free forever</p>
+        <a class="btn btn--outline btn--block" href="#">Get started</a>
+        <ul class="plan__list">
+          <li>1 workspace</li>
+          <li>3 data connections</li>
+          <li>Daily sync</li>
+          <li>Weekly digest</li>
+        </ul>
+      </article>
+
+      <article class="plan plan--hot reveal" data-delay="80">
+        <span class="plan__flag">Most popular</span>
+        <h3>Growth</h3>
+        <p class="plan__desc">For teams that live in the numbers weekly.</p>
+        <p class="plan__price"><span class="cur">$</span><span class="amt" data-monthly="39" data-yearly="31">39</span><span class="per">/mo</span></p>
+        <p class="plan__note" data-monthly="Billed monthly" data-yearly="Billed yearly">Billed monthly</p>
+        <a class="btn btn--primary btn--block" href="#">Start free trial</a>
+        <ul class="plan__list">
+          <li>Unlimited connections</li>
+          <li>Leak detection &amp; alerts</li>
+          <li>Forecasting &amp; scenarios</li>
+          <li>Board-ready reports</li>
+          <li>Priority support</li>
+        </ul>
+      </article>
+
+      <article class="plan reveal" data-delay="160">
+        <h3>Scale</h3>
+        <p class="plan__desc">For multi-entity teams with auditors in the room.</p>
+        <p class="plan__price"><span class="cur">$</span><span class="amt" data-monthly="99" data-yearly="79">99</span><span class="per">/mo</span></p>
+        <p class="plan__note" data-monthly="Billed monthly" data-yearly="Billed yearly">Billed monthly</p>
+        <a class="btn btn--outline btn--block" href="#">Talk to sales</a>
+        <ul class="plan__list">
+          <li>Everything in Growth</li>
+          <li>Unlimited workspaces</li>
+          <li>SSO / SAML &amp; audit log</li>
+          <li>Custom data residency</li>
+          <li>Dedicated CSM</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section section--alt" id="faq">
+  <div class="container narrow">
+    <header class="sec-head reveal">
+      <p class="tag">FAQ</p>
+      <h2>Questions, answered</h2>
+    </header>
+
+    <div class="faq">
+      <details class="faq__item reveal">
+        <summary>How long does setup really take?<span class="faq__ic" aria-hidden="true"></span></summary>
+        <p>Most teams are live in under an afternoon. Connect your tools with one click, and Lumen maps your categories automatically. If you'd rather have help, our onboarding is included on Growth and above.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Is my financial data safe?<span class="faq__ic" aria-hidden="true"></span></summary>
+        <p>Yes. Lumen is SOC 2 Type II certified, uses read-only connections by default, encrypts everything at rest and in transit, and never sells or trains on your data. You can delete your workspace and all records at any time.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Which tools do you integrate with?<span class="faq__ic" aria-hidden="true"></span></summary>
+        <p>Stripe, Shopify, Xero, QuickBooks, Google Ads, Meta Ads, HubSpot, Salesforce, and 40+ more through our API. There's a webhook receiver if you need something custom.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>What happens after the trial?<span class="faq__ic" aria-hidden="true"></span></summary>
+        <p>Nothing charges. If you don't upgrade within 14 days you move to the free Starter plan — your history stays intact and you can export it as CSV or PDF at any point.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Can I cancel whenever I want?<span class="faq__ic" aria-hidden="true"></span></summary>
+        <p>Yes. Cancel in two clicks from settings, no retention call, no exit fee. You keep access until the end of the billing period.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta">
+  <div class="container cta__inner reveal">
+    <h2>Stop running your business from memory</h2>
+    <p>Join 4,200+ teams who open one page and know exactly where they stand.</p>
+    <form class="hero__form hero__form--center" id="ctaForm" novalidate>
+      <input type="email" id="ctaEmail" name="email" placeholder="Work email" autocomplete="email" aria-label="Work email" required />
+      <button class="btn btn--primary btn--lg" type="submit">Start free trial</button>
+      <p class="form__msg" id="ctaMsg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a class="brand" href="#hero">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="32" height="32"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M9 22V10l7 7 7-7v12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="brand__name">Lumen</span>
+      </a>
+      <p>One clear page for your whole business.</p>
+    </div>
+
+    <div class="footer__cols">
+      <div><h4>Product</h4><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#how">How it works</a><a href="#">Changelog</a></div>
+      <div><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Blog</a><a href="#">Contact</a></div>
+      <div><h4>Resources</h4><a href="#">Docs</a><a href="#">API</a><a href="#">Status</a><a href="#faq">Support</a></div>
+      <div><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Security</a><a href="#">DPA</a></div>
+    </div>
+  </div>
+  <div class="container footer__bar">
+    <span>&copy; <span id="year">2026</span> Lumen Labs. All rights reserved.</span>
+    <span class="footer__status"><i></i> All systems operational</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

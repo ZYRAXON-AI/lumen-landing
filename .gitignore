@@ -1,0 +1,26 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Node (not used by this static site, but safe)
+node_modules/
+
+# ---- NEVER commit secrets ----
+.env
+.env.*
+*.pem
+*.key
+id_rsa
+id_ed25519
+credentials.json
+service-account*.json
+.npmrc
+.netrc
+secrets.*
+*.token
+
+# local scratch
+*.log
+tmp/
+scratch/
