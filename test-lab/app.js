@@ -329,8 +329,9 @@
     const sources = ["index.html", "style.css", "app.js"];
     Promise.all(
       sources.map((f) =>
-        fetch(f, { method: "HEAD" })
-          .then((r) => Number(r.headers.get("content-length")) || 0)
+        fetch(f)
+          .then((r) => r.text())
+          .then((t) => new Blob([t]).size)
           .catch(() => 0)
       )
     ).then((sizes) => {
