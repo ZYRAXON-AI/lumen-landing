@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ZYRAXON — Test Lab</title>
+<meta name="description" content="A live test build: interactive bento demos, particle field, and a password generator that actually works." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<canvas id="field" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <a class="brand" href="#top">
+    <span class="brand-mark"></span>
+    <span class="brand-text">ZYRAXON<em>lab</em></span>
+  </a>
+  <nav class="nav-links">
+    <a href="#demos">Demos</a>
+    <a href="#clock">Live</a>
+    <a href="#tool">Tool</a>
+  </nav>
+  <a class="nav-cta" href="#tool">Try it</a>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <p class="eyebrow"><span class="dot"></span> Live test build · deployed from the sandbox</p>
+    <h1>Built to be<br /><em>poked at.</em></h1>
+    <p class="lede">A small, real website. Everything below runs for real — the clock ticks, the counter counts, the accents repaint the page, and the generator makes passwords you could actually use.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#demos">Open the demos</a>
+      <a class="btn btn-ghost" href="#tool">Generate a password</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong id="stat-demos">5</strong><span>live demos</span></div>
+      <div><strong>0</strong><span>frameworks</span></div>
+      <div><strong id="stat-size">~18</strong><span>KB total</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="demos">
+    <div class="section-head">
+      <h2>Bento demos</h2>
+      <p>Five things that move when you touch them.</p>
+    </div>
+
+    <div class="bento">
+      <article class="card card-clock" id="clock">
+        <div class="card-top"><span class="tag">01</span><span class="card-label">Live clock</span></div>
+        <div class="clock-face">
+          <span id="clock-time">--:--:--</span>
+          <span id="clock-zone" class="clock-zone">—</span>
+        </div>
+        <p id="clock-date" class="card-note">—</p>
+      </article>
+
+      <article class="card card-counter">
+        <div class="card-top"><span class="tag">02</span><span class="card-label">Counter</span></div>
+        <div class="counter-value" id="counter-value">0</div>
+        <div class="counter-row">
+          <button class="chip" data-step="-1" aria-label="Decrease">−</button>
+          <button class="chip chip-accent" data-step="1" aria-label="Increase">+</button>
+          <button class="chip chip-ghost" id="counter-reset">reset</button>
+        </div>
+        <p class="card-note">Arrows on your keyboard work too.</p>
+      </article>
+
+      <article class="card card-accent">
+        <div class="card-top"><span class="tag">03</span><span class="card-label">Accent</span></div>
+        <p class="accent-note">Repaint the whole page.</p>
+        <div class="swatches" id="swatches">
+          <button class="swatch" data-accent="#7cf6c8" style="--c:#7cf6c8" aria-label="Mint"></button>
+          <button class="swatch" data-accent="#8ab4ff" style="--c:#8ab4ff" aria-label="Blue"></button>
+          <button class="swatch" data-accent="#ff8ad1" style="--c:#ff8ad1" aria-label="Pink"></button>
+          <button class="swatch" data-accent="#ffb86b" style="--c:#ffb86b" aria-label="Amber"></button>
+        </div>
+        <div class="accent-bar"><span id="accent-readout">#7cf6c8</span></div>
+      </article>
+
+      <article class="card card-typer">
+        <div class="card-top"><span class="tag">04</span><span class="card-label">Typewriter</span></div>
+        <p class="typer-line"><span id="typer"></span><span class="caret"></span></p>
+        <p class="card-note">Pure JS, no library.</p>
+      </article>
+
+      <article class="card card-tool" id="tool">
+        <div class="card-top"><span class="tag">05</span><span class="card-label">Password generator</span></div>
+        <div class="pw-output">
+          <code id="pw-out">click generate</code>
+          <button class="icon-btn" id="pw-copy" title="Copy">copy</button>
+        </div>
+        <label class="range-row">
+          <span>Length <b id="pw-len-label">20</b></span>
+          <input type="range" id="pw-len" min="8" max="48" value="20" />
+        </label>
+        <div class="pw-toggles">
+          <label><input type="checkbox" id="pw-upper" checked /><span>A–Z</span></label>
+          <label><input type="checkbox" id="pw-digits" checked /><span>0–9</span></label>
+          <label><input type="checkbox" id="pw-symbols" checked /><span>!@#</span></label>
+        </div>
+        <button class="btn btn-primary btn-block" id="pw-gen">Generate</button>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-split">
+    <div>
+      <h2>What this is</h2>
+      <p class="body-copy">A hand-built static page: one HTML file, one stylesheet, one script. No build step, no framework, no tracking. The particle field is a canvas running a tiny simulation; everything else is the DOM.</p>
+    </div>
+    <ul class="check-list">
+      <li>Real, working interactions — nothing faked</li>
+      <li>Responsive down to a 360px phone</li>
+      <li>Accessible labels and keyboard support</li>
+      <li>No external dependencies except the fonts</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-left">
+    <span class="brand-mark small"></span>
+    <span>ZYRAXON Lab — test build</span>
+  </div>
+  <div class="footer-right">
+    <span id="footer-clock">—</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
