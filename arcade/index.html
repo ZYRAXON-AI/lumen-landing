@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>NEON BREAKOUT — ZYRAXON arcade</title>
+<meta name="description" content="A neon breakout game in a single canvas: real physics, combos, three lives, and a high score that survives a reload." />
+<meta name="theme-color" content="#07060f" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="scanlines" aria-hidden="true"></div>
+
+<main class="shell">
+  <header class="hud">
+    <div class="hud-brand">
+      <span class="logo">◈</span>
+      <span class="logo-text">NEON<em>breakout</em></span>
+    </div>
+    <div class="hud-stats">
+      <div class="stat"><span class="stat-label">Score</span><strong id="score">0</strong></div>
+      <div class="stat"><span class="stat-label">High</span><strong id="high">0</strong></div>
+      <div class="stat"><span class="stat-label">Level</span><strong id="level">1</strong></div>
+      <div class="stat"><span class="stat-label">Lives</span><strong id="lives" class="lives">♥♥♥</strong></div>
+    </div>
+  </header>
+
+  <section class="stage" id="stage">
+    <canvas id="game" aria-label="Neon breakout game board" role="img"></canvas>
+
+    <div class="overlay" id="overlay" data-state="ready">
+      <div class="overlay-card">
+        <p class="overlay-kicker" id="ov-kicker">Arcade · one canvas</p>
+        <h1 class="overlay-title" id="ov-title">NEON<br /><span>BREAKOUT</span></h1>
+        <p class="overlay-text" id="ov-text">Move the paddle with your mouse, a finger, or the arrow keys. Break every brick. You get three lives.</p>
+        <p class="overlay-score" id="ov-score" hidden></p>
+        <button class="btn-play" id="ov-btn">Start game</button>
+        <p class="overlay-hint">Space to launch · P to pause · R to restart</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="controls">
+    <div class="ctrl-group">
+      <button class="btn" id="btn-pause" type="button">Pause</button>
+      <button class="btn" id="btn-restart" type="button">Restart</button>
+      <button class="btn btn-icon" id="btn-sound" type="button" aria-pressed="true" title="Sound on">♪</button>
+    </div>
+    <p class="ctrl-hint"><b>Move</b> mouse / touch / ← → <span class="sep">·</span> <b>Launch</b> space <span class="sep">·</span> <b>Pause</b> P</p>
+  </footer>
+</main>
+
+<script src="game.js"></script>
+</body>
+</html>
