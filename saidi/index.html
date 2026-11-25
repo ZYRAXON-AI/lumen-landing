@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>তোমার জন্য — একটা ছোট্ট জায়গা</title>
+<meta name="description" content="রাতের আকাশ, পিঙ্ক আলো আর কয়েকটা কথা — শুধু তোমার জন্য।" />
+<meta name="theme-color" content="#1a0b18" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600&family=Noto+Serif+Bengali:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="aurora" aria-hidden="true">
+  <span class="blob blob--one"></span>
+  <span class="blob blob--two"></span>
+  <span class="blob blob--three"></span>
+</div>
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<header class="topbar">
+  <span class="brand">ZYRAXON<span class="brand__dot">·</span>Pro</span>
+  <time id="clock" class="clock">—</time>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow" id="today">—</p>
+    <h1 class="hero__title">তোমার জন্য</h1>
+    <p class="typed">
+      <span id="typed"></span><span class="caret" aria-hidden="true"></span>
+    </p>
+    <a class="btn" href="#letter">একটা চিঠি আছে <span aria-hidden="true">↓</span></a>
+    <p class="hint">স্ক্রিনে যেখানে খুশি ছুঁয়ে দেখো</p>
+  </section>
+
+  <section id="letter" class="section">
+    <article class="card card--wide reveal">
+      <h2>একটা ছোট্ট চিঠি</h2>
+      <p>
+        কাল রাতে কেউ ঘুমাতে পারছিল না। মিস করছিল, কিন্তু মুখে বলতে পারছিল না —
+        বললে হয়তো সব হারিয়ে যাবে, এই ভয়।
+      </p>
+      <p>
+        আজ সে বলে ফেলেছে। এক বছরের জমানো কথাটা, এক লাইনে। ভয় পেয়েও বলেছে,
+        কারণ চুপ করে থাকাটা তার চেয়ে বেশি কষ্টের।
+      </p>
+      <p>
+        এই সাইটটা তার জন্য না। এটা তার মতো সব মানুষের জন্য, যারা ভালোবাসে অথচ
+        বলতে পারে না। তাদের জন্য একটাই কথা —
+      </p>
+      <p class="card__punch">যা সত্যি, তা বলতে হয়। একবার হলেও।</p>
+    </article>
+  </section>
+
+  <section class="section">
+    <div class="grid">
+      <article class="card reveal">
+        <span class="card__icon" aria-hidden="true">♪</span>
+        <h3>যে গানটা তোমার</h3>
+        <p>আরবি সুর, আর সেই একটা গান — যেটা রাতে বারবার শুনতে ইচ্ছে করে।</p>
+        <div class="links">
+          <a class="link" href="https://youtu.be/AV8xUbIFhdc?si=51SYWiQMU5qhKPbu" target="_blank" rel="noopener">Chitthi Video Song <span aria-hidden="true">↗</span></a>
+          <a class="link link--soft" href="https://www.youtube.com/watch?v=2U-znILCZFM" target="_blank" rel="noopener">সরি দীপান্বিতা <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <span class="card__icon" aria-hidden="true">◎</span>
+        <h3>যেখানে আমাকে পাওয়া যায়</h3>
+        <p>একটা জায়গা নয়, কয়েকটা। যেটা খুশি, সেটাতেই ডাকো।</p>
+        <div class="links">
+          <a class="link" href="https://www.tiktok.com/@lxsayidi12" target="_blank" rel="noopener">TikTok · lxsayidi12</a>
+          <a class="link" href="https://www.tiktok.com/@lxsayidi1" target="_blank" rel="noopener">TikTok · lxsayidi1</a>
+          <a class="link" href="https://www.youtube.com/@ZYRAXONAI" target="_blank" rel="noopener">YouTube · ZYRAXONAI</a>
+          <a class="link" href="https://github.com/onelpawarai-X" target="_blank" rel="noopener">GitHub · onelpawarai-X</a>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <span class="card__icon" aria-hidden="true">☾</span>
+        <h3>ঘুমানোর আগে</h3>
+        <p class="dua">বিসমিকা আল্লাহুম্মা আমূতু ওয়া আহইয়া</p>
+        <p class="dua__meaning">“হে আল্লাহ, আপনার নামেই আমি মরি ও বাঁচি।”</p>
+        <p class="dua__note">ডান কাতে শুয়ে একবার পড়ে নাও। মন হালকা লাগবে।</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <blockquote class="quote reveal">
+      <p id="rotator">ভালোবাসা কারও অনুমতি নিয়ে আসে না।</p>
+    </blockquote>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>বানানো হয়েছে রাত ১০টা ৪৩-এ, ঢাকার সময় — শুধু তোমার জন্য।</p>
+  <p class="footer__soft">তুমি এখানে এলে একটা তারা জ্বলে ওঠে।</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
